@@ -41,6 +41,7 @@
 html {
     font-family: 'Montserrat';
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -98,6 +99,7 @@ nav a {
 }
 
 main {
+    display: block;
     background-color: white;
     width: 100%;
     padding-top: 85px;
@@ -106,9 +108,7 @@ main {
 #about-me {
     display: inline-flex;
     justify-content: space-between;
-    height: 350px;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 #about-me-text {
@@ -123,6 +123,80 @@ main {
     aspect-ratio: 1 / 1;
 }
 
+#skills {
+    margin-bottom: 25px;
+}
+
+#skills-wrapper {
+    width: 500px;
+    margin: auto;
+}
+
+#skills-logos {
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+#skills-logos img {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#contact {
+    margin-bottom: 25px;
+}
+
+#contact-wrapper {
+    width: 200px;
+    margin: auto;
+}
+
+#contact-logos {
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+#contact-logos img {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#mail-logo {
+    filter: saturate(0) brightness(30%);
+    transition: all 0.5s ease-in;
+}
+
+#mail-logo:hover {
+    filter: saturate(100%) brightness(100%);
+    transition: all 0.5s ease-out;
+}
+
+#github-logo {
+    filter: saturate(0) brightness(50%);
+    transition: all 0.5s ease-in;
+}
+
+#github-logo:hover {
+    filter: saturate(100%) brightness(100%);
+    transition: all 0.5s ease-out;
+}
+
+#linkedin-logo {
+    filter: saturate(0) brightness(25%);
+    transition: all 0.5s ease-in;
+}
+
+#linkedin-logo:hover {
+    filter: saturate(100%) brightness(100%);
+    transition: all 0.5s ease-out;
+}
+ 
 @media only screen and (max-width: 1150px) {
     nav {
         width: 83%;
@@ -151,13 +225,17 @@ main {
         width: 50%;
         margin: auto;
     }
+
+    #skills-wrapper {
+        width: 500px;
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 670px) {
     #about-me-image {
         width: 270px;
         margin: auto;
-        min-width: 850;
     }
 
     nav {
@@ -169,5 +247,14 @@ main {
     #nav-links a {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    #skills-wrapper {
+        width: 350px;
+        margin: auto;
+    }
+
+    #contact-wrapper {
+        width: 150px;
     }
 }
