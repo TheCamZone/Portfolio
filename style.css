@@ -153,7 +153,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 670px) {
     #about-me-image {
         width: 270px;
         margin: auto;
