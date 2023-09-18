@@ -47,25 +47,24 @@ html {
 body {
     width: 960px;
     margin: auto;
+    transition: all 0.5s ease-out;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    margin: auto;
-    background-color: white;
-    padding-bottom: 5px;
-    height: 50px;
-    padding-top: 10px;
-    /* border-bottom: 1px black solid; */
-    margin-bottom: 25px;
+.dark-mode-no-transition {
+    filter: invert(1) hue-rotate(180deg);
+    background-color: #191919;
+}
+
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+    background-color: #191919;
+    transition: all 0.5s ease-out;
 }
 
 nav {
     position: fixed;
-    width: 960px;
+    width: 1025px;
     margin: auto;
-    background-color: white;
     padding-bottom: 5px;
     height: 50px;
     padding-top: 10px;
@@ -89,6 +88,10 @@ nav {
     font-weight: bold;
 }
 
+#dark-mode {
+    padding-left: 45px;
+}
+
 nav a {
     text-decoration: none;
     color: black;
@@ -100,7 +103,6 @@ nav a {
 
 main {
     display: block;
-    background-color: white;
     width: 100%;
     padding-top: 85px;
 }
@@ -118,7 +120,7 @@ main {
 
 #about-me-image {
     width: 40%;
-    background-color: red;
+    background-color: gray;
     border-radius: 15px;
     aspect-ratio: 1 / 1;
 }
@@ -232,10 +234,14 @@ main {
     }
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 740px) {
     #about-me-image {
         width: 270px;
         margin: auto;
+    }
+
+    #dark-mode {
+        display: none;
     }
 
     nav {
@@ -243,6 +249,11 @@ main {
         flex-wrap: wrap;
         justify-content: center;
         padding-bottom: 20px;
+        width: 83%;
+    }
+
+    #nav-links {
+        padding-left: 20px;
     }
 
     #nav-links a {
