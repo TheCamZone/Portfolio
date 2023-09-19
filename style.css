@@ -47,18 +47,21 @@ html {
 body {
     width: 960px;
     margin: auto;
-    transition: all 0.5s ease-out;
-}
-
-.dark-mode-no-transition {
-    filter: invert(1) hue-rotate(180deg);
-    background-color: #191919;
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 }
 
 .dark-mode {
     filter: invert(1) hue-rotate(180deg);
     background-color: #191919;
-    transition: all 0.5s ease-out;
+    transition-property: filter, color, background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+body.dark-mode nav {
+    position: fixed;
 }
 
 nav {
@@ -90,6 +93,11 @@ nav {
 
 #dark-mode {
     padding-left: 45px;
+}
+
+#dark-mode-icon {
+    cursor: pointer;
+    width: 20px;
 }
 
 nav a {
@@ -201,7 +209,11 @@ main {
  
 @media only screen and (max-width: 1150px) {
     nav {
-        width: 83%;
+        width: 88.6%;
+    }
+
+    body.dark-mode nav {
+        width: 106.8%;
     }
     
     body {
@@ -240,8 +252,13 @@ main {
         margin: auto;
     }
 
+    body.dark-mode nav {
+        width: 100%;
+    }
+
     #dark-mode {
         display: none;
+        padding-left: 0px;
     }
 
     nav {
@@ -268,5 +285,11 @@ main {
 
     #contact-wrapper {
         width: 150px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body.dark-mode nav {
+        width: 350px;
     }
 }

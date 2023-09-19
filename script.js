@@ -7,22 +7,22 @@ if(!localStorage.getItem("darkMode")) {
 }
 
 if(darkMode) {
-    document.body.classList.add("dark-mode-no-transition");
+    enableDarkMode(false);
 }
 
 document.getElementById('dark-mode').onclick = (element) => {
     darkMode = !darkMode;
 
     if(darkMode) {
-        enableDarkMode();
+        enableDarkMode(true);
     } else {
-        disableDarkMode();
+        disableDarkMode(true);
     }
-    
+
     localStorage.setItem("darkMode", darkMode);
 }
 
-function enableDarkMode() {
+function enableDarkMode(animation) {
     document.body.classList.add("dark-mode");
     document.getElementById('dark-mode-icon').src="resources/sun.png";
 }
